@@ -1,4 +1,3 @@
-
 #pragma once
 
 #include "CoreMinimal.h"
@@ -21,8 +20,15 @@ public:
 	virtual void SetupPlayerInputComponent(UInputComponent* PlayerInputComponent) override;
 
 private:
+	UPROPERTY(EditAnywhere)
+	float RotationRate;
+
+	
 	void MoveForward(float Value);
 	void MoveRight(float Value);
 	void LookUp(float Value);
 	void LookRight(float Value);
+
+	void LookUpRate(float Value);
+	void LookRightRate(float Value);
 };
